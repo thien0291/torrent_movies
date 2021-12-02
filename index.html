@@ -53,8 +53,10 @@
       "wss://tracker.webtorrent.io",
       "wss://tracker.novage.com.ua",
       "wss://peertube2.cpy.re/tracker/socket",
-      "wss://tracker.openwebtorrent.com"
+      "wss://tracker.openwebtorrent.com",
+      "http://track.one:1234/announce"
     ]
+
     function generateMagnetLink(torrent) {
       if (!typeof torrent === "object") return console.error('Invalid input')
       const trackersQueryString = `&tr=${trackers.map(encodeURIComponent).join('&tr=')}`;
